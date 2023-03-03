@@ -1,7 +1,12 @@
-const yearDiv = document.querySelector('#year');
+//const yearDiv = document.querySelector('#year');
 
-fetch('http://localhost:3000/year')
+  fetch('whatyearisit-backend-orcin.vercel.app')
   .then(response => response.text())
   .then(year => {
-    yearDiv.innerHTML += year;
-  });
+    // Récupérer l'élément avec l'ID "year"
+    const yearElement = document.querySelector('#year');
+    
+    // Modifier le contenu de l'élément avec l'année récupérée
+    yearElement.textContent = year;
+  })
+  .catch(error => console.error('Erreur lors de la récupération de l\'année :', error));
