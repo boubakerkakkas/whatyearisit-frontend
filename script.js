@@ -4,6 +4,6 @@
     console.log(data.year)
     
     // Récupérer l'élément avec l'ID "year"
-    const year = document.querySelector('#year').textContent
+    document.querySelector('#year').textContent = data.year
   })
   //.catch(error => console.error('Erreur lors de la récupération de l\'année :', error));
