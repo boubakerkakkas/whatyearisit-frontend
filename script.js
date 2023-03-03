@@ -1,4 +1,4 @@
-  fetch('whatyearisit-backend-orcin.vercel.app')
+  fetch('whatyearisit-backend-orcin.vercel.app/year')
   .then(response => response.json())
   .then(data => {
     console.log(data.year)
